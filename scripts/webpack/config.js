@@ -5,9 +5,9 @@ import webpack from "webpack"
  * Base webpack config
  */
 const webpackConfig = {
-  
+
   entry: {
-    "index": [ "./ui/index" ],
+    "index": [ "./index" ],
   },
 
   output: {
@@ -27,7 +27,7 @@ const webpackConfig = {
         loader: "babel",
         exclude: /node_modules/,
       },
-    ] 
+    ]
   },
   plugins: [
     new webpack.optimize.CommonsChunkPlugin("common.js"),

@@ -6,6 +6,7 @@ import webpackHotMiddleware from "webpack-hot-middleware"
 
 import config from "./config"
 
+const basedir = "../.."
 const { HOST } = process.env
 
 const server = express()
@@ -35,10 +36,10 @@ server.use(webpackDevMiddleware(compiler, {
 
 server.use(webpackHotMiddleware(compiler))
 
-server.use("/assets", express.static(path.join(__dirname, "../../assets")))
+server.use("/assets", express.static(path.join(__dirname, `${basedir}/assets`)))
 
 server.get("*" , (req, res) => {
-  res.sendFile(path.join(__dirname, "../../ui/index.html"))
+  res.sendFile(path.join(__dirname, `${basedir}/index.html`))
 })
 
 server.listen(3333, HOST || "localhost", (err) => {
@@ -46,4 +47,3 @@ server.listen(3333, HOST || "localhost", (err) => {
 })
 
 export default devConfig
-

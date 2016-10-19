@@ -1,12 +1,12 @@
 {
-  "name": "react-metronix",
-  "version": "0.0.0",
+  "name": "basic-react-webpack-setup",
+  "version": "0.0.1-SNAPSHOT",
   "description": "poc",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "HOST=0.0.0.0 NODE_ENV=development babel-node scripts/webpack/dev"
   },
-  "author": "Jean BOUDET",
+  "author": "Jean BOUDET & Francois TEYCHENE",
   "license": "undefined",
   "dependencies": {
     "express": "^4.13.3",

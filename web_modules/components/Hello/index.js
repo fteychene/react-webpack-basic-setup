@@ -1,11 +1,14 @@
 import React from "react"
 
-const Hello = ({ name }) => (
-  <h1>{name}</h1>
+const Hello = ({ prefix, name }) => (
+  <div>
+    <h1>{prefix} {name}</h1>
+    <p>This is a React component with a prefix {prefix} and a parameter {name}</p>
+  </div>
 )
 
 Hello.defaultProps = {
-  name: "World"
+  prefix: 'Hello,'
 }
 
 export default Hello
